@@ -1,8 +1,8 @@
 # Like_Girl V5.0.0
 
 
-- 演示地址：[演示](https://love.kikiw.cn)
-- 项目文档地址：[查看文档](https://blog.kikiw.cn/index.php/archives/46/)
+- 演示地址：[演示](https://lovey.kikiw.cn)
+- 项目文档地址：[查看文档](https://blog.kikiw.cn/index.php/archives/47/)
   ![首页](https://img.gejiba.com/images/d1947b697e6735637a6e460332ba14cd.png)
   ![后端](https://img.gejiba.com/images/7f71be28f996a744fdfacc9f663ec975.png)
 
@@ -115,10 +115,11 @@
 5.默认账号密码：`admin`/`love`
 #### 留言反馈
 
-
 - 花有重开日 人无再少年
 - 一辈子很短 要爱对的人
 - 珍惜眼前人 欢迎使用Like_Girl V5.0.0（最终版）
 - 使用过程中如遇到bug或建议请反馈到邮箱
 - mail@kikiw.cn
+#### 如当前项目对你有所帮助 可扫码赞助
+![收款码](https://img.gejiba.com/images/b5e058f6f3c2ce6bd9d3ab4205aa0bac.png) 
 
