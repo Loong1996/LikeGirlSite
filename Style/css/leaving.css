@@ -1,0 +1,193 @@
+.central.bg {
+    background: #fff;
+    border-radius: 2rem;
+    padding: 4rem 2rem;
+    box-shadow: 0 8px 12px #ebedf0;
+    border: 1px solid rgba(208, 206, 206, 0.4) !important;
+}
+
+.central.bg h3 {
+    text-align: center;
+    font-size: 1.5em;
+    padding: 2rem 0;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+}
+
+.central.bg h3 b {
+    font-size: 2.5rem;
+    color: #00bcd4;
+}
+
+.central.bg .row .card .leavform {
+    display: flex;
+    align-items: center;
+    margin: 2.8rem 0;
+    position: relative;
+}
+
+.jiequ {
+    display: block;
+    font-size: 1.2rem;
+    font-style: normal;
+    color: #969292;
+    margin-top: 0.9rem;
+}
+
+.central.bg .row .card .leavform img {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    display: block;
+    box-shadow: 0 2px 12px #7c7c7cba;
+    border: 2px solid #fff;
+}
+
+.central.bg .row .card .leavform .textinfo {
+    width: 70%;
+    margin-left: 1rem;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 2px 10px 0 rgb(143 143 143 / 12%);
+    border: 1px solid #ddddddc2;
+    border-radius: 1rem;
+}
+
+.central.bg .row .card .leavform .textinfo b {
+    line-height: 2rem;
+    border-left: 1.5px solid #acacac;
+    margin: 0 1rem;
+}
+
+.central.bg .row .card .leavform .textinfo .name {
+    font-size: 1.2rem;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 400;
+}
+
+.central.bg .row .card .leavform .textinfo .time {
+    font-size: .75rem;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 0rem;
+}
+
+.central.bg .row .card .leavform .textinfo .text {
+    margin-top: 1rem;
+    padding: 0.8rem 0;
+    color: #a3a3a3;
+    border-top: 2px dotted #cbcbcbb3;
+    letter-spacing: 0.1rem;
+    line-height: 1.6rem;
+}
+
+.central.bg .row .card .inputbox {
+    margin-top: 7rem;
+    padding: 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 4px dotted #ffbaba;
+}
+
+.central.bg .row .card .inputbox input {
+    border: none;
+    padding: 1rem 1.5rem;
+    border: 1px solid #ddddddb8 !important;
+    box-shadow: 0 2px 10px 0 rgb(148 147 147 / 15%);
+    border-radius: 0.5rem;
+    width: 30%;
+    background: #fafafa;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 400;
+}
+
+.central.bg .row .card .inputbox .rig {
+    margin-right: 1rem;
+}
+
+.central.bg .row .card #wenben {
+    box-sizing: border-box;
+    padding: 0.8rem 1.5rem;
+    width: 100%;
+    resize: vertical;
+    border-radius: 1rem;
+    font-size: 1.1rem;
+    background: url(https://img.gejiba.com/images/1a84fa62c26f66fd14b4aec1a7a20f4a.gif) no-repeat right center;
+    background-size: 30%;
+    background-color: #ffffff;
+    transition: all 0.25s ease-in-out 0s;
+    border: 1px solid #ddddddb8 !important;
+    box-shadow: 0 2px 10px 0 rgb(148 147 147 / 15%);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 400;
+}
+
+.central.bg .row .card #wenben:focus {
+    background-position-y: 187px;
+    transition: all 0.25s ease-in-out 0s;
+}
+
+.central.bg .row .card .input-sub {
+    text-align: right;
+    margin: 1rem 0;
+}
+
+.central.bg .row .card .input-sub .tijiao {
+    padding: 0.8rem 3rem;
+    border: none;
+    border-radius: 1rem;
+    background: #000;
+    color: #fff;
+    font-size: 1.3rem;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 10px 0 rgb(92 92 92 / 44%);
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+    margin-top: 20px;
+}
+
+.central.bg .row .card .input-sub .tijiao:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.leav_icon {
+    width: 2em;
+    height: 2em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
+span.name {
+    padding: 0.2rem 0.8rem;
+    border-radius: 2rem;
+    background: #232323ab;
+    color: #fff;
+    font-size: 1rem !important;
+    text-transform: capitalize;
+}
+
+span.name.ipclass {
+    color: #fa5c7c;
+    background-color: rgba(250, 92, 124, .18);
+    font-size: 0.8rem !important;
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 700;
+}
+
+.central.bg .row .card .leavform .textinfo .time {
+    text-align: right;
+    display: inherit;
+}
+
+.central.bg .row .card .leavform .textinfo .text {
+    font-family: 'Noto Serif SC', serif;
+    font-weight: 400;
+}
+svg.leav_icon.sm22 {
+    padding: 0.5rem;
+    background: #f3f3f3;
+    border-radius: 50%;
+    margin-right: 0.8rem;
+}
