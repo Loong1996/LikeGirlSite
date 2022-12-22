@@ -2,7 +2,7 @@
 
 
 - 演示地址：[演示](https://lovey.kikiw.cn)
-- 项目文档地址：[查看文档](https://blog.kikiw.cn/index.php/archives/47/)
+- 项目文档地址：[查看文档](https://blog.kikiw.cn/index.php/archives/52/)
   ![首页](https://img.gejiba.com/images/d1947b697e6735637a6e460332ba14cd.png)
   ![后端](https://img.gejiba.com/images/7f71be28f996a744fdfacc9f663ec975.png)
 
