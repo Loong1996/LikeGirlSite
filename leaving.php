@@ -9,7 +9,7 @@ $Set = mysqli_query($connect, $leavSet);
 $Setinfo = mysqli_fetch_array($Set);
 $jiequ = $Setinfo['jiequ'];
 
-$ip = $_SERVER['REMOTE_ADDR'];
+$lyip = $_SERVER['REMOTE_ADDR'];
 include_once 'admin/Database.php';
     $liuyan = "SELECT * FROM leaving order by id desc limit ?";
     $stmt=$conn->prepare($liuyan);
@@ -65,7 +65,7 @@ include_once 'admin/Database.php';
                     </div>
                     <textarea name="text" id="wenben" rows="8" placeholder="请输入您的留言内容（恶意留言会封禁IP...）"></textarea>
                     <div class="input-sub">
-                        <input name="ip" value="<?php echo $ip ?>" type="hidden">
+                        <input name="ip" value="<?php echo $lyip ?>" type="hidden">
                         <button type="button" id="leavingPost" class="tijiao" onclick="return testing()">提交留言</button>
                     </div>
                 </form>
