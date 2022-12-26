@@ -1,5 +1,6 @@
 # Like_Girl V5.0.0
 
+![5.0.0](https://img.gejiba.com/images/444c8467c3cb72f3002c80eab60659a1.png)
 
 - 演示地址：[演示](https://lovey.kikiw.cn)
 - 项目文档地址：[查看文档](https://blog.kikiw.cn/index.php/archives/52/)
