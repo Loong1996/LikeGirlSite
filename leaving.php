@@ -74,7 +74,6 @@ include_once 'admin/Database.php';
     </div>
     <script>
             $('#QQ').blur(function () {
-                    loadingname();
             var QQ = $("#QQ").val();
                 $.ajax({
                 url: "https://api.usuuu.com/qq/" + QQ,
@@ -83,6 +82,7 @@ include_once 'admin/Database.php';
                 dataType: "json",
                 statusCode: {
                     500: function (response) {
+                        loadingname();
                         setTimeout(function(){
                 			removeLoading('test');
                 			toastr["warning"]("获取失败 QQ号码错误", "Like_Girl");
@@ -94,6 +94,7 @@ include_once 'admin/Database.php';
                         removeLoading('test');
                 		toastr["warning"]("获取失败 QQ号码长度错误", "Like_Girl");
                     }
+                    loadingname();
                     $("#nickname").val(result["data"].name);
                     $(".avatar").attr("src", result["data"].avatar);
                     setTimeout(function(){
