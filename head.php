@@ -89,7 +89,7 @@ $Animation = $text['Animation']
 <script src="../Style/js/jquery.pjax.js" type="text/javascript"></script>
 <script src="../Style/pagelir/spotlight.bundle.js"></script>
 <script src="../Style/js/loading.js"></script>
-<?php echo $diy['headCon'] ?>
+<?php echo htmlspecialchars_decode($diy['headCon'],ENT_QUOTES) ?>
 <?php if ($diy['Pjaxkg'] == "1") { ?>
     <script>
         $(document).pjax('a[target!=_blank]', '#pjax-container', {fragment: '#pjax-container', timeout: 8000});
