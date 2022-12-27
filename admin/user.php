@@ -47,19 +47,19 @@ include_once 'Nav.php';
                     <div class="form-group mb-3">
                         <label for="validationCustom05">自定义前端全局CSS样式
                             <span class="badge badge-primary-lighten">请按CSS格式填写你的代码</span></label>
-                        <textarea name="cssCon" data-toggle="maxlength" class="form-control" maxlength="225" rows="5"
+                        <textarea name="cssCon"  class="form-control"  rows="5"
                                   placeholder=""><?php echo $diy['cssCon'] ?></textarea>
                     </div>
                     <div class="form-group mb-3">
                         <label for="validationCustom05">自定义头部标签
                             <span class="badge badge-primary-lighten">可填写HTML标签 CSS外链</span></label>
-                        <textarea name="headCon" data-toggle="maxlength" class="form-control" maxlength="225" rows="5"
+                        <textarea name="headCon"  class="form-control"  rows="5"
                                   placeholder=""><?php echo $diy['headCon'] ?></textarea>
                     </div>
                     <div class="form-group mb-3">
                         <label for="validationCustom05">自定义底部标签
                             <span class="badge badge-primary-lighten">可填写HTML标签 js外链</span></label>
-                        <textarea name="footerCon" data-toggle="maxlength" class="form-control" maxlength="225" rows="5"
+                        <textarea name="footerCon"  class="form-control"  rows="5"
                                   placeholder=""><?php echo $diy['footerCon'] ?></textarea>
                     </div>
                     <div class="form-group mb-3">
