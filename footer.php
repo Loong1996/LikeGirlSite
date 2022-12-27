@@ -76,4 +76,4 @@
     })
     
 </script>
-<?php echo $diy['footerCon'] ?>
+<?php echo htmlspecialchars_decode($diy['footerCon'],ENT_QUOTES) ?>
