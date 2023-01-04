@@ -1,3 +1,9 @@
+### LikeGirl配套微信小程序
+
+![小程序](https://img.gejiba.com/images/b7fdf30b219be03008ed4e5e7c039471.png)
+小程序文档地址：[查看详情](https://blog.kikiw.cn/index.php/archives/55/)
+
+
 # Like_Girl V5.0.0
 
 ![5.0.0](https://img.gejiba.com/images/444c8467c3cb72f3002c80eab60659a1.png)
