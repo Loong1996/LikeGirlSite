@@ -18,6 +18,15 @@ include_once 'Nav.php';
     <strong>Error - </strong> 当前账号为默认账号 请尽快修改！
 </div>
 <?php }?>
+
+
+    <div class="alert alert-success alert-dismissible bg-success text-white border-0 fade show" role="alert">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+        </button>
+        <strong>Info - </strong> 已发现付费版本 LG_UI  <a style="color:#494949;" href="https://blog.kikiw.cn/index.php/archives/65/">点击查看文档</a> 作者新作品～
+    </div>
+
 <?php if ($login['pw'] == md5($adminpw))  {?>
     <div class="alert alert-danger alert-dismissible bg-danger text-white border-0 fade show" role="alert">
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
