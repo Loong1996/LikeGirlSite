@@ -1,3 +1,12 @@
+# LG_Ui V1.0.0 新UI付费特别版
+
+![1.0.0](https://img.gejiba.com/images/46cf6d409b0142b91bb6741512066516.png)
+
+
+[如需了解请前往文档查看](https://blog.kikiw.cn/index.php/archives/65/)
+
+![输入图片说明](https://img.gejiba.com/images/2925450ef9fe8efc41d6381731068a3d.jpg)
+
 ### LikeGirl配套微信小程序
 
 ![小程序](https://img.gejiba.com/images/b7fdf30b219be03008ed4e5e7c039471.png)
