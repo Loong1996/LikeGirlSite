@@ -1,8 +1,16 @@
-# LG_Ui V1.0.0 新UI付费特别版
+# LG_NewUi V2.2.0 清新UI 多功能版
+- 新增点点滴滴页 网易云音乐解析 支持QQ和网易云部分音乐解析
+- 新增子相册页 相册多图模式
+- 新增情侣节日纪念日模块
 
-![1.0.0](https://img.gejiba.com/images/46cf6d409b0142b91bb6741512066516.png)
+![2.2.0](https://img.gejiba.com/images/46cf6d409b0142b91bb6741512066516.png)
 
+![输入图片说明](https://img.gejiba.com/images/e0bf70684448dcebc3df32fc659ca0e1.jpg)
 
+![输入图片说明](https://img.gejiba.com/images/8c71bd32b3243abffe868b67cd696f03.jpg)
+
+### 文档详情
+demo查看：[LGUI v2.2.0](https://lguiy.kikiw.cn/)
 [如需了解请前往文档查看](https://blog.kikiw.cn/index.php/archives/65/)
 
 ![输入图片说明](https://img.gejiba.com/images/2925450ef9fe8efc41d6381731068a3d.jpg)
