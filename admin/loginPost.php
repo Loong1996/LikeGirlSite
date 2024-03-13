@@ -21,8 +21,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['loginadmin'] = $USER;
             echo "<script>alert('登录成功');location.href = '../admin/index.php';</script>";
         } else {
-        }
         die("<script>alert('登录失败，密码错误');history.back();</script>");
+        }
     } else {
         die("<script>alert('登录失败，用户名错误');history.back();</script>");
     }
