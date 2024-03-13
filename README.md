@@ -1,3 +1,5 @@
+基于[Gitee kiCode111/like-girl5.0.0](https://gitee.com/kiCode111/like-girl5.0.0)项目
+
 # LG_NewUi 情侣小站新春限定版（付费版）
 - 新增点点滴滴页 网易云音乐解析 支持QQ和网易云部分音乐解析
 - 新增子相册页 相册多图模式
