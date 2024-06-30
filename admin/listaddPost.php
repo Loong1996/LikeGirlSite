@@ -1,8 +1,6 @@
 <?php
 session_start();
-?>
 
-<?php
 $name = htmlspecialchars(trim($_POST['eventname']),ENT_QUOTES);
 $file = $_SERVER['PHP_SELF'];
 if ($_POST['img'] === 0) {
@@ -25,7 +23,6 @@ if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] <> '') {
         echo "1";
     } else {
         echo "0";
-//    echo "$qq,$name,$text,$time";
     }
 } else {
     echo "<script>alert('非法操作，行为已记录');location.href = 'warning.php?route=$file';</script>";

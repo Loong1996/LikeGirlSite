@@ -1,15 +1,10 @@
 <?php
 session_start();
-?>
 
-<?php
-include_once 'connect.php';
+include_once 'Nav.php';
 $ipkiki = "select * from IPerror order by id desc";
 $ipki = mysqli_query($connect, $ipkiki);
-?>
 
-<?php
-include_once 'Nav.php';
 ?>
 
 <link href="/admin/assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>

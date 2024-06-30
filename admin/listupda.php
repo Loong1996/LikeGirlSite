@@ -1,8 +1,6 @@
 <?php
 session_start();
-?>
 
-<?php
 $name = htmlspecialchars(trim($_POST['eventname']),ENT_QUOTES);
 $icon = $_POST['icon'];
 $id = $_POST['id'];
@@ -19,6 +17,7 @@ if (!$icon) {
 } else {
     $icon = $_POST['icon'];
 }
+
 if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] <> '') {
     $sql = "update lovelist set eventname = '$name',icon ='$icon',imgurl ='$img' where id ='$id' ";
     $reslove = mysqli_query($connect, $sql);

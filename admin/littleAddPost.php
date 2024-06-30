@@ -1,15 +1,13 @@
 <?php
 session_start();
-?>
-<?php
-$title = htmlspecialchars(trim($_POST['articletitle']),ENT_QUOTES);
-$text = trim($_POST['articletext']);
-$name = trim($_POST['articlename']);
-$time = gmdate("Y-m-d", time() + 8 * 3600);
 $file = $_SERVER['PHP_SELF'];
 include_once 'connect.php';
 
 if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] <> '') {
+    $title = htmlspecialchars(trim($_POST['articletitle']), ENT_QUOTES);
+    $text = trim($_POST['articletext']);
+    $name = trim($_POST['articlename']);
+    $time = gmdate("Y-m-d", time() + 8 * 3600);
     $charu = "insert into article (articletitle,articletext,articletime,articlename) values ('$title','$text','$time','$name')";
     $result = mysqli_query($connect, $charu);
     if ($result) {

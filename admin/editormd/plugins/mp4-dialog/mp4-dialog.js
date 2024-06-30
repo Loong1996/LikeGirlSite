@@ -83,7 +83,7 @@
                             
                             if (title == "")
                             {
-                                str = "<iframe src=\"" + url + "\" allowfullscreen=\"true\"></iframe>";
+                                str = "<video src=\"" + url + "\" controls\"controls\"></vidoe>";
                             }                                
 
                             cm.replaceSelection(str);

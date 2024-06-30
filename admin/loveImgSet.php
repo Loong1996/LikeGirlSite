@@ -1,14 +1,10 @@
 <?php
 session_start();
-?>
-<?php
-include_once 'connect.php';
+include_once 'Nav.php';
 $loveImg = "select * from loveImg order by id desc";
 $resImg = mysqli_query($connect, $loveImg);
 ?>
-<?php
-include_once 'Nav.php';
-?>
+
 
 <link href="assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
 <link href="assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css"/>

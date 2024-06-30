@@ -1,11 +1,18 @@
-<!--
+<!-- 
+ * @Version：Like Girl 5.1.0
  * @Author: Ki.
- * @Date: 2022-12-21 07:35:43
- * @LastEditors: Ki.
- * @LastEditTime: 2022-12-21 07:51:06
+ * @Date: 2024-06-07 09:00:00
+ * @LastEditTime: 2024-06-07
  * @Description: 花有重开日 人无再少年
- * Copyright (c) 2022 by Ki All Rights Reserved. 
--->
+ * @Document：https://blog.kikiw.cn/index.php/archives/52/
+ * @Copyright (c) 2024 by Ki All Rights Reserved. 
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Message：开发不易 版权信息请保留 （删除/更改版权的无耻之人请勿使用 查到一个挂一个）
+ * @Message：开发不易 版权信息请保留 （删除/更改版权的无耻之人请勿使用 查到一个挂一个）
+ * @Message：开发不易 版权信息请保留 （删除/更改版权的无耻之人请勿使用 查到一个挂一个）
+ -->
 <!DOCTYPE html>
 <html lang="zh-CN">
 
@@ -40,49 +47,26 @@
 </script>
 
 <?php
-function get_ip_city($ip)
-{
-    $ch = curl_init();
-    $url = 'https://whois.pconline.com.cn/ipJson.jsp?ip=' . $ip;
-    //用curl发送接收数据
-    curl_setopt($ch, CURLOPT_URL, $url);
-    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-    //请求为https
-    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
-    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
-    $location = curl_exec($ch);
-    curl_close($ch);
-    //转码
-    $location = mb_convert_encoding($location, 'utf-8', 'GB2312');
-    //var_dump($location);
-    //截取{}中的字符串
-    $location = substr($location, strlen('({') + strpos($location, '({'), (strlen($location) - strpos($location, '})')) * (-1));
-    //将截取的字符串$location中的‘，’替换成‘&’   将字符串中的‘：‘替换成‘=’
-    $location = str_replace('"', "", str_replace(":", "=", str_replace(",", "&", $location)));
-    //php内置函数，将处理成类似于url参数的格式的字符串  转换成数组
-    parse_str($location, $ip_location);
-    return $ip_location['pro'];
-}
 
 $file = $_GET['route'];
 
 include_once 'Database.php';
-if ($file ){
+include_once 'Function.php';
+
+if ($file){
     $ipcharu = "insert into warning (ip,gsd,time,file) values (?,?,?,?)";
     $stmt = $conn->prepare($ipcharu);
     $stmt->bind_param("ssss", $ip, $gsd, $time, $file);
     $ip = $_SERVER["REMOTE_ADDR"];
-    $gsd = get_ip_city($ip);
+    $gsd = get_ip_city_New($ip);
     $time = gmdate("Y-m-d H:i:s", time() + 8 * 3600);
     $file = $_GET['route'];
     $result = $stmt->execute();
     if (!$result) echo "错误信息：" . $stmt->error;
     $stmt->fetch();
 }else{
-    die ("参数错误");
+    die ("<script>alert('参数错误 请注意你的行为');</script");
 }
-
-
 
 ?>
 
@@ -126,12 +110,11 @@ if ($file ){
                     <div class="card-body p-4">
 
                         <div class="text-center w-75 m-auto">
-                            <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Like_Girl 5.0.0</h4>
+                            <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Like_Girl 5.1.0</h4>
                             <div class="info">温馨提示：请停止你的行为<i style="color: #ff9b9b;"><?php echo $ip ?></i></div>
                         </div>
                         <div class="text-center w-75 m-auto" style="margin-bottom: 40px!important;">
-                            <img src="https://img-love.kikiw.cn/loveweb/hh.svg" style="width: 100%;border-radius: 20px;"
-                                 alt="">
+                            <img src="https://img.gejiba.com/images/ff63a429a6fbd20d6748242b182d2159.jpg" style="width: 100%;border-radius: 10px;box-shadow: 0 0 35px 0 rgb(154 161 171 / 25%);">
                         </div>
 
                         <div class="form-group mb-0 text-center">
@@ -158,7 +141,7 @@ if ($file ){
 <!-- end page -->
 
 <footer class="footer footer-alt">
-    Copyright © 2022 Ki. && <a href="https://blog.kikiw.cn/index.php/archives/24/" target="_blank">Like_Girl</a> All
+    Copyright © 2022-<?php echo date("Y") ?> Ki. && <a href="https://blog.kikiw.cn/index.php/archives/52/" target="_blank">Like_Girl</a> All
     Rights Reserved.
 </footer>
 

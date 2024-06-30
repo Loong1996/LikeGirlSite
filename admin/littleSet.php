@@ -1,14 +1,9 @@
 <?php
 session_start();
-?>
-<?php
-include_once 'connect.php';
+
+include_once 'Nav.php';
 $article = "select * from article order by id desc";
 $resarticle = mysqli_query($connect, $article);
-?>
-
-<?php
-include_once 'Nav.php';
 ?>
 
 <link href="/admin/assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>

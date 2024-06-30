@@ -1,16 +1,10 @@
 <?php
 session_start();
-?>
-
-<?php
-include_once 'connect.php';
+include_once 'Nav.php';
 $ipkiki = "select * from warning order by id desc";
 $ipki = mysqli_query($connect, $ipkiki);
 ?>
 
-<?php
-include_once 'Nav.php';
-?>
 
 <link href="/admin/assets/css/vendor/dataTables.bootstrap4.css" rel="stylesheet" type="text/css"/>
 <link href="/admin/assets/css/vendor/responsive.bootstrap4.css" rel="stylesheet" type="text/css"/>
@@ -44,7 +38,7 @@ include_once 'Nav.php';
                                 <small class="text-muted"><?php echo $IPinfo['time'] ?></small>
                             </td>
                             <td>
-                                <h5><span class="badge badge-success-lighten"> <?php echo $IPinfo['file'] ?></span></h5>
+                                <h5><span class="badge badge-success-lighten"> <?php echo htmlspecialchars($IPinfo['file'], ENT_QUOTES, 'UTF-8')  ?></span></h5>
                             </td>
                             <td>
                                 <h5>

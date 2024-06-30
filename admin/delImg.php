@@ -1,14 +1,9 @@
 <?php
 session_start();
-?>
-
-<?php
 include_once 'connect.php';
-$id = $_GET['id'];
-$imgText = $_GET['imgText'];
-$file = $_SERVER['PHP_SELF'];
 
 if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] <> '') {
+    $id = $_GET['id'];
     if (is_numeric($id)) {
         $sql = "delete from loveImg where id = $id";
         $result = mysqli_query($connect, $sql);

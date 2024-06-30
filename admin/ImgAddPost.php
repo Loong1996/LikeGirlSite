@@ -1,17 +1,15 @@
 <?php
 session_start();
-?>
-
-<?php
-$imgText = htmlspecialchars(trim($_POST['imgText']),ENT_QUOTES);
-$imgDatd = trim($_POST['imgDatd']);
-$imgUrl = htmlspecialchars(trim($_POST['imgUrl']),ENT_QUOTES);
 $file = $_SERVER['PHP_SELF'];
 
 
 include_once 'connect.php';
 
 if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] <> '') {
+    $imgText = htmlspecialchars(trim($_POST['imgText']), ENT_QUOTES);
+    $imgDatd = trim($_POST['imgDatd']);
+    $imgUrl = htmlspecialchars(trim($_POST['imgUrl']), ENT_QUOTES);
+    
     $charu = "insert into loveImg (imgDatd,imgText,imgUrl) values ('$imgDatd','$imgText','$imgUrl')";
     $result = mysqli_query($connect, $charu);
     if ($result) {

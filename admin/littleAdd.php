@@ -1,12 +1,8 @@
 <?php
 session_start();
-?>
-
-
-
-<?php
 include_once 'Nav.php';
 ?>
+
 <link href="/admin/editormd/css/editormd.css" rel="stylesheet">
 <div class="row">
 

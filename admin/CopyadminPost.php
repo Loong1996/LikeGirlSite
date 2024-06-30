@@ -1,16 +1,14 @@
 <?php
 session_start();
-?>
 
-
-<?php
-$adminName = trim($_POST['adminName']);
-$icp = trim($_POST['icp']);
-$Copyright = trim($_POST['Copyright']);
 $file = $_SERVER['PHP_SELF'];
 include_once 'connect.php';
 
 if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] <> '') {
+    $adminName = trim($_POST['adminName']);
+    $icp = trim($_POST['icp']);
+    $Copyright = trim($_POST['Copyright']);
+
     $sql = "update text set icp = '$icp', Copyright = '$Copyright' ";
     $result = mysqli_query($connect, $sql);
     if ($result) {

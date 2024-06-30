@@ -1,10 +1,15 @@
 .toast-title {
   font-weight: bold;
   display: block;
+  font-family: 'Noto Serif SC', serif;
+  font-size: 1.3rem;
+  margin-bottom: .6rem;
 }
 .toast-message {
   -ms-word-wrap: break-word;
   word-wrap: break-word;
+  font-family: 'Noto Serif SC', serif;
+  /* margin-bottom: .3rem; */
 }
 .toast-message a,
 .toast-message label {

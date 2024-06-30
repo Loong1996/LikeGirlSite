@@ -1,30 +1,28 @@
 <?php
 session_start();
-?>
-
-<?php
-$adminName = trim($_POST['adminName']);
-$pw = trim($_POST['pw']);
-$user = trim($_POST['userQQ']);
-$name = trim($_POST['userName']);
-$Webanimation = trim($_POST['Webanimation']);
-$cssCon = trim($_POST['cssCon']);
-$headCon = htmlspecialchars(trim($_POST['headCon']),ENT_QUOTES);
-$footerCon = htmlspecialchars(trim($_POST['footerCon']),ENT_QUOTES);
-$SCode = trim($_POST['SCode']);
 $file = $_SERVER['PHP_SELF'];
 include_once 'connect.php';
 if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] <> '') {
 
-    if ($LikeGirl_Code == $SCode){
+    $adminName = trim($_POST['adminName']);
+    $pw = trim($_POST['pw']);
+    $user = trim($_POST['userQQ']);
+    $name = trim($_POST['userName']);
+    $Webanimation = trim($_POST['Webanimation']);
+    $cssCon = trim($_POST['cssCon']);
+    $headCon = htmlspecialchars(trim($_POST['headCon']), ENT_QUOTES);
+    $footerCon = htmlspecialchars(trim($_POST['footerCon']), ENT_QUOTES);
+    $SCode = trim($_POST['SCode']);
+    
+    if ($LikeGirl_Code == $SCode) {
         $sql = "update text set userQQ = '$user',userName = '$name',animation = '$Webanimation' ";
         $result = mysqli_query($connect, $sql);
 
         if ($pw) {
-            $loginsql = "update login set user = '$adminName' ,pw ='" . md5($pw) . "' where id = '1'";
+            $loginsql = "update login set user = '$adminName' ,pw ='" . md5($pw) . "' where id = 1";
             session_destroy();
         } else {
-            $loginsql = "update login set user = '$adminName'  where id = '1'";
+            $loginsql = "update login set user = '$adminName' where id = 1";
         }
         $loginresult = mysqli_query($connect, $loginsql);
         if ($loginresult) {
@@ -39,12 +37,12 @@ if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] <> '') {
         }
         $diysql = "update diySet set headCon = '$headCon',footerCon = '$footerCon',cssCon = '$cssCon' ";
         $diyresult = mysqli_query($connect, $diysql);
-         if ($diyresult) {
+        if ($diyresult) {
             echo "5";
         } else {
             echo "6";
         }
-    }else{
+    } else {
         echo "7";
     }
 
