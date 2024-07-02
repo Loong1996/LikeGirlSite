@@ -1,15 +1,11 @@
 <?php
 session_start();
-?>
-<?php
+include_once 'Nav.php';
 $id = $_GET['id'];
 $icon = $_GET['icon'];
 $name = $_GET['name'];
 $imgurl = $_GET['imgurl'];
-?>
 
-<?php
-include_once 'Nav.php';
 ?>
 
 <div class="row">

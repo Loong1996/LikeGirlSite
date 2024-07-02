@@ -1,11 +1,17 @@
 <!--
+ * @Version：Like Girl 5.1.0
  * @Author: Ki.
- * @Date: 2022-12-21 07:35:43
- * @LastEditors: Ki.
- * @LastEditTime: 2022-12-21 07:51:06
+ * @Date: 2024-06-07 09:00:00
+ * @LastEditTime: 2024-06-07
  * @Description: 花有重开日 人无再少年
- * Copyright (c) 2022 by Ki All Rights Reserved. 
+ * @Document：https://blog.kikiw.cn/index.php/archives/52/
+ * @Copyright (c) 2024 by Ki All Rights Reserved. 
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Message：开发不易 版权信息请保留 
 -->
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <?php
@@ -19,9 +25,6 @@ $result = $stmt->execute();
 if(!$result) echo "错误信息：".$stmt->error;
 $stmt->fetch();
 
-
-//$result = mysqli_query($connect, $sql);
-//$fjyy = mysqli_fetch_array($result);
 ?>
 <head>
     <meta charset="utf-8"/>
@@ -115,7 +118,7 @@ $stmt->fetch();
                             </p>
                         </div>
                         <div class="text-center w-75 m-auto" style="margin-bottom: 40px!important;">
-                            <?php if ($text){?> <img src="https://blog.kikiw.cn/img/hh.svg" style="width: 100%;border-radius: 20px;" alt=""> <?php } ?>
+                            <?php if ($text){?> <img src="https://img.gejiba.com/images/ff63a429a6fbd20d6748242b182d2159.jpg" style="width: 100%;border-radius: 20px;" alt=""> <?php } ?>
 
                         </div>
 

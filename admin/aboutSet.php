@@ -1,16 +1,9 @@
 <?php
 session_start();
-?>
-
-
-<?php
-include_once 'connect.php';
+include_once 'Nav.php';
 $absql = "SELECT * FROM about";
 $resab = mysqli_query($connect, $absql);
 $about = mysqli_fetch_array($resab);
-?>
-<?php
-include_once 'Nav.php';
 ?>
 <form class="needs-validation" action="aboutPost.php" method="post" novalidate>
     <div class="row">

@@ -4,7 +4,6 @@ include_once 'admin/connect.php';
 
 $ipchaxun = "select * from IPerror";
 $ipres = mysqli_query($connect, $ipchaxun);
-//禁用ip地址 
 
 while ($IPinfo = mysqli_fetch_array($ipres)) {
 
@@ -19,6 +18,3 @@ while ($IPinfo = mysqli_fetch_array($ipres)) {
 
     }
 }
-
-
-?>

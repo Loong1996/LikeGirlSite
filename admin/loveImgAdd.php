@@ -1,9 +1,5 @@
 <?php
 session_start();
-?>
-
-
-<?php
 include_once 'Nav.php';
 $inv_date = date("Y-m-d");
 ?>

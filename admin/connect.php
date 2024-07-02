@@ -7,4 +7,4 @@ $LikeGirl_Code = $Like_Code;
 if (!$connect) {
     die("<script>location.href = '../admin/connectDie.php';</script>");
 }
-$connect->query("SET NAMES 'utf8'");  
+$connect->set_charset("utf8mb4");  

@@ -1,16 +1,12 @@
 <?php
 session_start();
-?>
-<?php
-include_once 'connect.php';
+include_once 'Nav.php';
+
 $ipchaxun = "select * from IPerror";
 $ipres = mysqli_query($connect, $ipchaxun);
 $IPinfo = mysqli_fetch_array($ipres);
 ?>
 
-<?php
-include_once 'Nav.php';
-?>
 <div class="row">
 
     <div class="col-lg-12">

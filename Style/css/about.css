@@ -1,23 +1,7 @@
 .botui-message-content-image {
   border-radius: 0.6rem;
 }
-::-webkit-scrollbar-thumb {
-  background-color: #12f5b8;
-  background-image: -webkit-linear-gradient(45deg, #ff5dab 25%, transparent 25%, transparent 50%, #ff5d93 50%, #ff5db1 75%, transparent 75%, transparent);
-}
-::-webkit-scrollbar {
-  width: 8px;
-  height: 1px;
-}
-::-webkit-scrollbar {
-  width: 6px;
-}
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-}
-::-webkit-scrollbar-corner {
-  background: unset;
-}
+
 .text-ce {
   width: 100%;
   text-align: center;

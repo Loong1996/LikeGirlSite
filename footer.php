@@ -2,13 +2,60 @@
 <div id="pjax-container">
     <script>
         $(function () {
-            $("img[src$=jpg],img[src$=gif],img[src$=JPG],img[src$=png],img[src$=jpeg]").addClass("spotlight").each(function () {
+            $(".love_img img,.lovelist img,.little_texts img").addClass("spotlight").each(function () {
                 this.onclick = function () {
                     return hs.expand(this)
                 }
+                toastr.options = {
+                    "closeButton": true,
+                    "debug": false,
+                    "newestOnTop": false,
+                    "progressBar": true,
+                    "rtl": false,
+                    "positionClass": "toast-top-right",
+                    "preventDuplicates": false,
+                    "onclick": null,
+                    "showDuration": 300,
+                    "hideDuration": 1000,
+                    "timeOut": 5000,
+                    "extendedTimeOut": 1000,
+                    "showEasing": "swing",
+                    "hideEasing": "linear",
+                    "showMethod": "fadeIn",
+                    "hideMethod": "fadeOut"
+                };
             });
 
+            window.onscroll = function () {
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop > 500) {
+                    $('.wenan').css({
+                        'color': '#333333'
+                    });
+                    $('.alogo').css({
+                        'color': '#333333'
+                    });
+                }
+
+                if (scrollTop < 500) {
+                    $('.wenan').css({
+                        'color': '#fff'
+                    });
+                    $('.alogo').css({
+                        'color': '#fff'
+                    });
+                }
+            }
+
+            FunLazy({
+                placeholder: "Style/img/Loading2.gif",
+                effect: "show",
+                strictLazyMode: false,
+                useErrorImagePlaceholder: "https://img.gejiba.com/images/dbc7f2562e051afc3c39f916689ba5f0.png"
+            })
+
         })
+
 
     </script>
     <style>
@@ -32,48 +79,35 @@
             cursor: pointer;
             cursor: url(../Style/cur/hover.cur), pointer;
         }
+
         button:disabled {
             background: #888;
             opacity: 0.6;
         }
-        .avatar{
-            width: 2.5em;
-            height: 2.5em;
+
+        .avatar {
+            width: 3em;
+            height: 3em;
             border-radius: 50%;
-            box-shadow: 0 2px 8px #a9a9a98c;
+            box-shadow: 0 2px 20px #c5c5c575;
             border: 2px solid #fff;
             margin-right: 0.8rem;
         }
     </style>
 </div>
-<div class="footer-warp">
-    <div class="footer">
-        <p><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><?php echo $icp ?></a></p>
-        <p><?php echo $copy ?></p>
-    </div>
-</div>
-<script>
-        $(function () {
-        toastr.options = {
-            "closeButton": true,
-            "debug": false,
-            "newestOnTop": false,
-            "progressBar": true,
-            "rtl": false,
-            "positionClass": "toast-top-right",
-            "preventDuplicates": false,
-            "onclick": null,
-            "showDuration": 300,
-            "hideDuration": 1000,
-            "timeOut": 5000,
-            "extendedTimeOut": 1000,
-            "showEasing": "swing",
-            "hideEasing": "linear",
-            "showMethod": "fadeIn",
-            "hideMethod": "fadeOut"
-        };
 
-    })
-    
-</script>
-<?php echo htmlspecialchars_decode($diy['footerCon'],ENT_QUOTES) ?>
+<?php if ($icp <> '' || $copy <> ''): ?>
+    <div class="footer-warp">
+        <div class="footer">
+            <?php if ($icp): ?>
+                <p><a href="https://beian.miit.gov.cn/#/Integrated/index" target="_blank"><?php echo $icp ?></a></p>
+            <?php endif;
+            if ($copy): ?>
+                <p><?php echo $copy ?></p>
+            <?php endif; ?>
+        </div>
+    </div>
+<?php endif; ?>
+
+
+<?php echo htmlspecialchars_decode($diy['footerCon'], ENT_QUOTES) ?>

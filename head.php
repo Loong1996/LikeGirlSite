@@ -1,8 +1,24 @@
-<?php include("ipjc.php"); ?>
+<!--
+ * @Version：Like Girl 5.1.0
+ * @Author: Ki.
+ * @Date: 2024-06-07 09:00:00
+ * @LastEditTime: 2024-06-07
+ * @Description: 花有重开日 人无再少年
+ * @Document：https://blog.kikiw.cn/index.php/archives/52/
+ * @Copyright (c) 2024 by Ki All Rights Reserved. 
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Message：开发不易 版权信息请保留 (删除/修改作者版权的Dog请勿使用 感谢配合)
+-->
 <?php
 error_reporting(0);
+include ("ipjc.php");
+include_once ("ip.php");
 include_once 'admin/connect.php';
-$sql = "select * from text ";
+include_once 'admin/Function.php';
+
+$sql = "select * from text";
 $result = mysqli_query($connect, $sql);
 $text = mysqli_fetch_array($result);
 
@@ -11,15 +27,21 @@ $result = mysqli_query($connect, $sql);
 if (mysqli_num_rows($result)) {
     $diy = mysqli_fetch_array($result);
 }
+
 $copy = $text['Copyright'];
 $icp = $text['icp'];
-$Animation = $text['Animation']
+$Animation = $text['Animation'];
 ?>
-<script src="ip.php"></script>
+
+
+
 <script>
+
+    console.log("%c Q & V | 3439780232", "color:#fff;background:#000;padding:8px 15px;font-weight: 700;border-radius:15px");
+    console.log("%c Like Girl 5.1.0 | Powered by Ki", "color:#fff;font-weight: 700;background:linear-gradient(270deg,#986fee,#8695e6,#68b7dd,#18d7d3);padding:8px 15px;border-radius:15px");
     function show_date_time() {
         window.setTimeout("show_date_time()", 1000);
-        BirthDay = new Date("<?php echo $text['startTime']?>");
+        BirthDay = new Date("<?php echo $text['startTime'] ?>");
         today = new Date();
         timeold = (today.getTime() - BirthDay.getTime());
         sectimeold = timeold / 1000;
@@ -32,84 +54,94 @@ $Animation = $text['Animation']
         e_minsold = (e_hrsold - hrsold) * 60;
         minsold = Math.floor((e_hrsold - hrsold) * 60);
         seconds = Math.floor((e_minsold - minsold) * 60);
-        var timeKi = document.getElementById('span_dt_dt');
+        let timeKi = document.getElementById('span_dt_dt');
         if (timeKi !== null) {
             span_dt_dt.innerHTML = "这是我们一起走过的";
-            tian.innerHTML = daysold;
-            shi.innerHTML = hrsold;
-            fen.innerHTML = minsold;
-            miao.innerHTML = seconds;
+            tian.innerHTML = daysold + '天';
+            shi.innerHTML = hrsold + '时';
+            fen.innerHTML = minsold + '分';
+            if (seconds < 10) {
+                seconds = "0" + seconds
+            }
+            miao.innerHTML = seconds + '秒';
         }
     }
 
     show_date_time();
 </script>
-<!--
- * @Author: Ki.
- * @Date: 2022-12-21 07:35:43
- * @LastEditTime: 2022-12-21 07:51:06
- * @Description: 花有重开日 人无再少年
- * Copyright (c) 2022 by Ki All Rights Reserved. 
--->
-
-<!-- Like Girl v5.0.0 -->
-<!-- Copyright (c) 2022 Ki. -->
-<!-- Date：2022-09-10 -->
-<!-- Document：https://blog.kikiw.cn/index.php/archives/46/ -->
-<!-- Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责 -->
-<!-- 开发不易 版权信息请保留 -->
-
-<script>
-    console.log("%c Like Girl v5.0.0 | Powered by Ki", "color:#fff;background:linear-gradient(270deg,#986fee,#8695e6,#68b7dd,#18d7d3);padding:8px 15px;border-radius:15px");
-    console.log("%c Q | 3439780232", "color:#fff;background:#000;padding:8px 15px;border-radius:15px");
-</script>
-<link rel="shortcut icon" href="/favicon.ico"/>
-<!-- 定义视窗 -->
+<link rel="shortcut icon" href="/favicon.ico" />
+<meta name="keywords"
+    content="<?php echo $text['title'] ?>,Like Girl 5.1.0,LGNeUi,情侣小站,开源情侣网站,PHP情侣网站,情侣记录,情侣网站,情侣项目,情侣小窝,Love,LikeGirl,Ki,PHP情侣小站,情侣小站使用教程,情侣小站使用文档">
+<meta name="discription" content="<?php echo $text['writing'] ?> - Like Girl 5.1.0">
+<meta name="author" content="Ki">
 <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
-<!-- 引入思源宋体 -->
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@700&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../Style/css/leaving.css">
-<link rel="stylesheet" href="../Style/css/index.css">
+<link rel="stylesheet" href="../Style/css/leaving.css?LikeGirl=<?php echo $version ?>">
+<link rel="stylesheet" href="../Style/css/index.css?LikeGirl=<?php echo $version ?>">
+<link rel="stylesheet" href="../Style/css/little.css?LikeGirl=<?php echo $version ?>">
+<link rel="stylesheet" href="../Style/css/about.css?LikeGirl=<?php echo $version ?>">
 <link rel="stylesheet" href="../Style/css/animate.min.css">
-<link rel="stylesheet" href="../Style/css/little.css">
-<link rel="stylesheet" href="../Style/css/about.css">
 <link rel="stylesheet" href="../Botui/botui.min.css">
 <link rel="stylesheet" href="../Botui/botui-theme-default.css">
-<link rel="stylesheet" href="../Style/css/loveImg.css">
-<link rel="stylesheet" href="../Style/css/list.css">
 <link rel="stylesheet" href="../Style/Font/font_list/iconfont.css">
-<link rel="stylesheet" href="../Style/toastr/toastr.css">
-<link rel="stylesheet" href="../Style/css/loadinglike.css">
+<link rel="stylesheet" href="../Style/css/loveImg.css?LikeGirl=<?php echo $version ?>">
+<link rel="stylesheet" href="../Style/css/list.css?LikeGirl=<?php echo $version ?>">
+<link rel="stylesheet" href="../Style/toastr/toastr.css?LikeGirl=<?php echo $version ?>">
+<link rel="stylesheet" href="../Style/css/loadinglike.css?LikeGirl=<?php echo $version ?>">
 <script src="../Style/Font/font_leav/iconfont.js"></script>
 <script src="../Style/Font/font_leav/iconfont.js"></script>
 <script src="../Botui/botui.min.js"></script>
-<script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+<script src="../Style/js/vue.min.js"></script>
 <script src="../Style/jquery/jquery.min.js"></script>
 <script src="../Style/js/jquery.pjax.js" type="text/javascript"></script>
 <script src="../Style/pagelir/spotlight.bundle.js"></script>
-<script src="../Style/js/loading.js"></script>
-<?php echo htmlspecialchars_decode($diy['headCon'],ENT_QUOTES) ?>
-<?php if ($diy['Pjaxkg'] == "1") { ?>
+<script src="../Style/js/funlazy.min.js"></script>
+<script src="../Style/js/loading.js?LikeGirl=<?php echo $version ?>"></script>
+
+<?php
+echo htmlspecialchars_decode($diy['headCon'], ENT_QUOTES);
+if ($diy['Pjaxkg'] == "1"):
+    ?>
     <script>
-        $(document).pjax('a[target!=_blank]', '#pjax-container', {fragment: '#pjax-container', timeout: 8000});
+        $(document).pjax('a[target!=_blank]', '#pjax-container', { fragment: '#pjax-container', timeout: 15000 });
         $(document).on('pjax:send', function () {
             NProgress.start();
         });
         $(document).on('pjax:complete', function () {
-            $("img[src$=jpg],img[src$=gif],img[src$=JPG],img[src$=png],img[src$=jpeg]").addClass("spotlight");
+            $(".love_img img,.lovelist img,.little_texts img").addClass("spotlight");
             NProgress.done();
-            $(".lovelist ul").hide();
-            $(".lovelist li").bind("click", function () {
-                $(this).next("ul").slideToggle(500).siblings("ul").slideUp(500);
+            window.onscroll = function () {
+                let scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+                if (scrollTop > 500) {
+                    $('.wenan').css({
+                        'color': '#333333'
+                    });
+                    $('.alogo').css({
+                        'color': '#333333'
+                    });
+                }
+
+                if (scrollTop < 500) {
+                    $('.wenan').css({
+                        'color': '#fff'
+                    });
+                    $('.alogo').css({
+                        'color': '#fff'
+                    });
+                }
+            }
+            FunLazy({
+                placeholder: "Style/img/Loading2.gif",
+                effect: "show",
+                strictLazyMode: false,
+                useErrorImagePlaceholder: "https://img.gejiba.com/images/dbc7f2562e051afc3c39f916689ba5f0.png"
             })
-
-
         });
     </script>
-<?php } ?>
-<script src="../Style/js/nprogress.js"></script>
-<link href="../Style/css/nprogress.css" rel="stylesheet" type="text/css">
+<?php endif; ?>
+<script src="../Style/js/nprogress.js?LikeGirl=<?php echo $version ?>"></script>
+<link href="../Style/css/nprogress.css?LikeGirl=<?php echo $version ?>" rel="stylesheet" type="text/css">
 <!-- 头部导航条 -->
 <div class="header-wrap">
     <div class="header">
@@ -125,71 +157,40 @@ $Animation = $text['Animation']
 <div class="bg-wrap">
     <div class="bg-img">
         <div class="central central-800">
-            <div class="middle <?php if ($text['Animation'] == "1") { ?>animated bounce<?php } ?> <?php if ($diy['Blurkg'] == "2") { ?>Blurkg<?php } ?>">
+            <div
+                class="middle <?php if ($text['Animation'] == "1") { ?>animated fadeInDown<?php } ?> <?php if ($diy['Blurkg'] == "2") { ?>Blurkg<?php } ?>">
                 <div class="img-male">
-                    <img src="https://q1.qlogo.cn/g?b=qq&nk=<?php echo $text['boyimg'] ?>&s=640" alt="">
+                    <img src="https://q1.qlogo.cn/g?b=qq&nk=<?php echo $text['boyimg'] ?>&s=640" draggable="false">
                     <span><?php echo $text['boy'] ?></span>
                 </div>
                 <div class="love-icon">
-                    <img src="Style/img/like.svg" alt="">
+                    <img src="Style/img/like.svg" draggable="false">
                 </div>
                 <div class="img-female">
-                    <img src="https://q1.qlogo.cn/g?b=qq&nk=<?php echo $text['girlimg'] ?>&s=640" alt="">
+                    <img src="https://q1.qlogo.cn/g?b=qq&nk=<?php echo $text['girlimg'] ?>&s=640" draggable="false">
                     <span><?php echo $text['girl'] ?></span>
                 </div>
             </div>
         </div>
         <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-             viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+            viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
             <defs>
-                <path id="gentle-wave"
-                      d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z"/>
+                <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
             </defs>
             <g class="parallax">
-                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7"/>
-                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)"/>
-                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)"/>
-                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff"/>
+                <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(255,255,255,0.7" />
+                <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(255,255,255,0.5)" />
+                <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(255,255,255,0.3)" />
+                <use xlink:href="#gentle-wave" x="48" y="7" fill="#fff" />
             </g>
         </svg>
     </div>
 </div>
 
-<script>
-    window.onscroll = function () {
-        var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
-        if (scrollTop > 500) {
-            $('.wenan').css({
-                'color': '#707070'
-            });
-            $('.alogo').css({
-                'color': '#707070'
-            });
-        }
-
-        if (scrollTop < 500) {
-            $('.wenan').css({
-                'color': '#fff'
-            });
-            $('.alogo').css({
-                'color': '#fff'
-            });
-        }
-    }
-
-</script>
 
 <style>
-    .central.bg .row .card .leavform .textinfo .time {
-        text-align: right;
-        display: inherit;
-        font-family: 'Noto Serif SC', serif;
-        font-weight: 400;
-        color: #423a3a;
-    }
-
     .bg-img {
-        background: url(<?php echo $text['bgimg']?>) no-repeat center !important;
+        background: url(<?php echo $text['bgimg'] ?>) no-repeat center !important;
         background-size: cover !important;
     }
 
@@ -201,20 +202,6 @@ $Animation = $text['Animation']
     .alogo {
         color: #fff;
         transition: all 0.2s linear;
-    }
-
-    code {
-        padding: 0.4rem 0.5rem;
-        border-radius: 0.4rem;
-        font-size: 1rem;
-        color: #fa5c7c;
-        background-color: rgba(250, 92, 124, .18);
-        font-family: 'Noto Serif SC', serif;
-        font-weight: 700;
-    }
-
-    quote {
-        width: 98% !important;
     }
 
     /* webkit, opera, IE9 （谷歌浏览器）*/

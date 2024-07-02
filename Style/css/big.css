@@ -46,6 +46,11 @@
 .central-6 {
   width: 600px;
 }
+
+.central-800 {
+  width: 800px;
+}
+
 .central-600 {
   width: 800px;
   border-radius: 2rem;
@@ -53,4 +58,8 @@
 }
 .w125 {
   width: 100%!important;
+}
+
+.central.bg .row .card .inputbox {
+  padding: 3rem 0 2rem;
 }

@@ -1,10 +1,17 @@
 <!--
+ * @Version：Like Girl 5.1.0
  * @Author: Ki.
- * @Date: 2022-12-21 07:35:43
- * @LastEditors: Ki.
- * @LastEditTime: 2022-12-21 07:51:06
+ * @Date: 2024-06-07 09:00:00
+ * @LastEditTime: 2024-06-07
  * @Description: 花有重开日 人无再少年
- * Copyright (c) 2022 by Ki All Rights Reserved. 
+ * @Document：https://blog.kikiw.cn/index.php/archives/52/
+ * @Copyright (c) 2024 by Ki All Rights Reserved. 
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Warning：禁止以任何方式出售本项目 如有发现一切后果自行负责
+ * @Message：开发不易 版权信息请保留 （删除/更改版权的无耻之人请勿使用 查到一个挂一个）
+ * @Message：开发不易 版权信息请保留 （删除/更改版权的无耻之人请勿使用 查到一个挂一个）
+ * @Message：开发不易 版权信息请保留 （删除/更改版权的无耻之人请勿使用 查到一个挂一个）
 -->
 
 
@@ -15,7 +22,7 @@
     <meta charset="utf-8"/>
     <title>数据库连接失败</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description"/>
+    <meta content="Like Girl 5.1.0" name="description"/>
     <meta content="Coderthemes" name="author"/>
 
     <!-- App css -->
@@ -73,7 +80,7 @@
                     <div class="card-body p-4">
 
                         <div class="text-center w-75 m-auto">
-                            <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Like_Girl 5.0.0</h4>
+                            <h4 class="text-dark-50 text-center mt-0 font-weight-bold">Like_Girl 5.1.0</h4>
                             <div class="info">请检查数据库信息是否配置正确<i style="color: #ff9b9b;"></i></div>
                         </div>
                         <div class="text-center w-75 m-auto" style="margin-bottom: 40px!important;">
@@ -83,7 +90,7 @@
                         <div class="text-center info">配置成功后可到admin目录下删除当前页面<i style="color: #ff9b9b;"></i></div>
 
                         <div class="form-group mb-0 text-center">
-                            <a href="https://blog.kikiw.cn/index.php/archives/43/">
+                            <a href="https://blog.kikiw.cn/index.php/archives/52/">
                                 <button
                                         class="btn btn-primary" type="submit"> 配置教程
                                 </button>

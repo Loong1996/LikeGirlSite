@@ -1,15 +1,14 @@
 <?php
 session_start();
-?>
 
-<?php
-$jiequ = trim($_POST['jiequ']);
-$lanjiezf = htmlspecialchars(trim($_POST['lanjiezf']),ENT_QUOTES);
 $file = $_SERVER['PHP_SELF'];
 
 include_once 'connect.php';
 
 if (isset($_SESSION['loginadmin']) && $_SESSION['loginadmin'] <> '') {
+    $jiequ = trim($_POST['jiequ']);
+    $lanjiezf = htmlspecialchars(trim($_POST['lanjiezf']), ENT_QUOTES);
+    
     $sql = "update leavSet set jiequ = '$jiequ',lanjiezf ='$lanjiezf'  ";
     $result = mysqli_query($connect, $sql);
     if ($result) {

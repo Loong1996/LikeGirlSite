@@ -1,16 +1,12 @@
 <?php
 session_start();
-?>
-<?php
+include_once 'Nav.php';
+
 $id = $_GET['id'];
 include_once 'connect.php';
-$loveImg = "select * from loveImg WHERE id='$id' limit 1";
+$loveImg = "select * from loveImg WHERE id=$id limit 1";
 $resImg = mysqli_query($connect, $loveImg);
 $Imglist = mysqli_fetch_array($resImg);
-?>
-
-<?php
-include_once 'Nav.php';
 ?>
 
 <div class="row">

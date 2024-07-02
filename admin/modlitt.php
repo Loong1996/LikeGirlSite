@@ -1,19 +1,10 @@
 <?php
 session_start();
-?>
-<?php
+include_once 'Nav.php';
 $id = $_GET['id'];
-?>
-
-<?php
-include_once 'connect.php';
-$article = "SELECT * FROM article WHERE id='$id' limit 1";
+$article = "SELECT * FROM article WHERE id=$id limit 1";
 $resarticle = mysqli_query($connect, $article);
 $mod = mysqli_fetch_array($resarticle);
-?>
-
-<?php
-include_once 'Nav.php';
 ?>
 
 <link href="/admin/editormd/css/editormd.css" rel="stylesheet">

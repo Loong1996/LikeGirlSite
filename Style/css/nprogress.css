@@ -44,8 +44,8 @@
   box-sizing: border-box;
 
   border: solid 2px transparent;
-  border-top-color: #db51c0;
-  border-left-color: #db51c0;
+  border-top-color: #58bcff;
+  border-left-color: rgba(255, 126, 203, 0.817);
   border-radius: 50%;
 
   -webkit-animation: nprogress-spinner 400ms linear infinite;

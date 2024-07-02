@@ -1,14 +1,12 @@
 <?php
 session_start();
-?>
-<?php
-include_once 'connect.php';
+
+include_once 'Nav.php';
 $leavSet = "select * from leavSet order by id desc";
 $Set = mysqli_query($connect, $leavSet);
 $Setinfo = mysqli_fetch_array($Set);
-?>
-<?php
-include_once 'Nav.php';
+
+
 ?>
 <div class="row">
 
