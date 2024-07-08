@@ -18,7 +18,7 @@ include ($_SERVER['DOCUMENT_ROOT'] . '/ipjc.php');
 error_reporting(0);
 include_once 'connect.php';
 include_once 'Function.php';
-$sql = "select * from login where user = '" . $_SESSION['loginadmin'] . " ' ";
+$sql = "select * from login where user = '" . $_SESSION['loginadmin'] . "' ";
 $loginresult = mysqli_query($connect, $sql);
 if (mysqli_num_rows($loginresult)) {
     $login = mysqli_fetch_array($loginresult);
