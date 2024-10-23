@@ -2,8 +2,8 @@
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
-    <strong>温馨提醒 - </strong> 当前版本为开源版，作者已不在维护。如需稳定使用请考虑新作品【LGNewUI】限时购买特惠--2024/06/09 <button type="button"
-        id="myButton" class="btn btn-secondary btn-rounded" data-toggle='modal' data-target='#bs-example-modal-lg'>查看介绍</button>
+    <strong>温馨提醒 - </strong> 基于<a href="https://gitee.com/kiCode111/LikeGirl_5.1.0">原作者</a>开源版本的继续开发 -- Loong 2024-10-23
+    <button type="button" id="myButton" class="btn btn-secondary btn-rounded" data-toggle='modal' data-target='#bs-example-modal-lg'>查看介绍</button>
 </div>
 
 <?php if ($login['user'] == $adminuser): ?>
@@ -34,25 +34,7 @@
                 <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
             </div>
             <div class="modal-body">
-                <p>经过一年的开发磨练 情侣小站迎来了延伸版本【LGNewUI】目前已经开发了许多实用增强功能 满足情侣记录所需要求 </p>
-                <p>如您感兴趣请点击下方按钮【查看详情】进一步了解 如有打扰 请到【admin/index.php】删除注释提醒位置代码即可清除所有提示内容</p>
-                <p>感谢您的使用 当前六一限定版本 原价<span class="badge badge-danger-lighten"><s>238.88</s></span>现在购买仅需<span class="badge badge-success-lighten">178.88/元</span>
-                    功能详情可点击下方按钮了解</p>
-                <div>
-                    <h3>LG_NewUi 情侣小站六一限定版</h3>
-                    <ul>
-                        <li>2.0.0 版本号 2023050108 发布于 2023-04-30</li>
-                        <li>2.2.0 版本号 2023052018 发布于 2023-05-20</li>
-                        <li>2.3.1 版本号 2023071013 发布于 2023-07-10</li>
-                        <li>2.3.3 版本号 2023072320 发布于 2023-07-23</li>
-                        <li>3.1x 版本号 2023092220 发布于 2023-09-22</li>
-                        <li>新春限定 版本号 20240207 发布于 2024-02-06</li>
-                        <li>五一限定 版本号 20240501 发布于 2024-04-29</li>
-                        <li>六一限定 版本号 20240601 发布于 2024-06-01</li>
-                    </ul>
                     <h4>最新版本更新详情</h4>
-
-
                     <ul>
                         <li>新增前端点点滴滴加密访问 管理员无需输入密码</li>
                         <li>新增前端恋爱相册加密访问 管理员无需输入密码</li>
@@ -116,13 +98,13 @@
                         <li>新增后台发布内容时自动优先选择当前登录用户昵称</li>
                         <li>新增留言页游客留言显示操作系统、浏览器信息</li>
                     </ul>
-                    <img src="https://www.kikiw.cn/liuyi.png" alt="">
+                    <!-- <img src="https://www.kikiw.cn/liuyi.png" alt=""> -->
                 </div>
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-light" data-dismiss="modal">关闭</button>
-                <button type="button" class="btn btn-primary"><a target="_blank" style="color: #fff;"
-                        href="https://blog.kikiw.cn/index.php/archives/65/">查看详情</a></button>
+                <!-- <button type="button" class="btn btn-primary"><a target="_blank" style="color: #fff;"
+                        href="https://blog.kikiw.cn/index.php/archives/65/">查看详情</a></button> -->
             </div>
         </div>
     </div>

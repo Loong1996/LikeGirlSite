@@ -281,7 +281,8 @@ if (mysqli_num_rows($result)) {
 
 
                 <!-- Help Box -->
-                <div class="help-box text-center">
+                <!-- 管理界面左下角购买提示 -->
+                <!-- <div class="help-box text-center">
                     <a href="javascript: void(0);" class="float-right close-btn text-body">
                         <i class="mdi mdi-close"></i>
                     </a>
@@ -289,7 +290,7 @@ if (mysqli_num_rows($result)) {
                     <h5 class="mt-3">Like_Girl V5.1.0</h5>
                     <p class="mb-3">花有重开日 人无再少年</p>
                     <a href="https://blog.kikiw.cn/index.php/archives/65/" target="_blank" class="btn btn-outline-primary btn-sm">购买Pro版本</a>
-                </div>
+                </div> -->
                 <!-- end Help Box -->
                 <!-- End Sidebar -->
 

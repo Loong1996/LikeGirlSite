@@ -2,12 +2,12 @@
 session_start();
 include_once 'Nav.php';
 
-$url = 'https://www.kikiw.cn/Love/likev5.php';
-$lines_array = file($url);
-$lines_string = implode('', $lines_array);
-$userurl = 'https://www.kikiw.cn/Love/userLikeGirl.php';
-$userarray = file($userurl);
-$userstring = implode('', $userarray);
+// $url = 'https://www.kikiw.cn/Love/likev5.php';
+// $lines_array = file($url);
+// $lines_string = implode('', $lines_array);
+// $userurl = 'https://www.kikiw.cn/Love/userLikeGirl.php';
+// $userarray = file($userurl);
+// $userstring = implode('', $userarray);
 
 ?>
 
@@ -44,13 +44,13 @@ $userstring = implode('', $userarray);
 
 <div class="row">
 
-    <div class="col-sm-12">
+    <!-- <div class="col-sm-12">
         <?php echo ($userstring); ?>
     </div>
 
     <div class="col-md-12">
         <?php echo ($lines_string); ?>
-    </div>
+    </div> -->
 
 </div>
 
