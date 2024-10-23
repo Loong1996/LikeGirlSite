@@ -21,6 +21,7 @@ if ($USER == $Login_user) {
     if ($PW == $Login_pw) {
         $_SESSION['loginadmin'] = $USER;
         echo "<script>alert('登录成功 欢迎进入小站后台管理页面！');location.href = '../admin/index.php';</script>";
+        exit;
     } else {
         //密码错误
         die("<script>alert('登录失败，用户名或密码错误！！！');history.back();</script>");

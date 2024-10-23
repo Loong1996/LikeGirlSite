@@ -223,6 +223,7 @@ if ($diy['Pjaxkg'] == "1"):
 
     .Blurkg {
         backdrop-filter: blur(0px) !important;
+        -webkit-backdrop-filter: blur(0px) !important;
         background: transparent !important;
     }
 

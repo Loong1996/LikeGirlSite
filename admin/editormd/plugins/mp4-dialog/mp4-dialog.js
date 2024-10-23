@@ -83,7 +83,7 @@
                             
                             if (title == "")
                             {
-                                str = "<video src=\"" + url + "\" controls\"controls\"></vidoe>";
+                                str = "<video src=\"" + url + "\" controls\"controls\"></video>";
                             }                                
 
                             cm.replaceSelection(str);

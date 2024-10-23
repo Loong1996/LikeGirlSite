@@ -75,7 +75,7 @@
                             <p class="text-muted mb-4">花有重开日 人无再少年</p>
                         </div>
 
-                        <form action="loginPost.php" method="post" onsubmit="return check()">
+                        <form action="loginPost.php" method="post">
 
                             <div class="form-group">
                                 <label for="emailaddress">User</label>
@@ -115,42 +115,9 @@
 <!-- end container -->
 </div>
 <!-- end page -->
-<script>
-    function check() {
-        //获取name数组中的第0个索引 并且去掉空格
-        let adminName = document.getElementsByName('adminName')[0].value.trim();
-        let pw = document.getElementsByName('pw')[0].value.trim();
-        // 判断adminName长度是否为0 如果为0则提示弹窗
-        if (adminName.length == 0) {
-            alert("请填写用户名");
-            return false;
-        } else if (pw.length == 0) {
-            alert("请填写密码");
-            return false;
-        }
-        let user = /[a-zA-Z0-9]/g;
-        let character = new RegExp("[`~!#$^&*()=|{}':;',\\[\\].<>/?~！#￥……&*（）——|{}【】‘；：”“'。，、？]");
-        if (character.test(adminName)) {
-            alert("用户名含有特殊字符 请重新输入")
-            return false;
-        }else if (!(user.test(adminName))) {
-            alert("用户名只支持数字 英文大小写字母")
-            return false;
-        }
-        
-        if (character.test(pw)) {
-            alert("密码含有特殊字符 请重新输入")
-            return false;
-        }
-        
-        
-
-    }
-
-</script>
 
 <footer class="footer footer-alt">
-    Copyright © 2022 Ki. && <a href="https://blog.kikiw.cn/index.php/archives/24/" target="_blank">Like_Girl</a> All
+    Copyright © 2024 Ki. && <a href="https://blog.kikiw.cn/index.php/archives/65/" target="_blank">Like_Girl</a> All
     Rights Reserved.
 </footer>
 
